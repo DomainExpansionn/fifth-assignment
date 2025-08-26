@@ -28,6 +28,8 @@ favourites.forEach((fav) => {
   });
 });
 
+// Copy Feature
+
 const copy_btn = document.querySelectorAll('.copy-btn');
 copy_btn.forEach((copied) =>{
     copied.addEventListener('click', ()=>{
@@ -36,5 +38,12 @@ copy_btn.forEach((copied) =>{
         navigator.clipboard.writeText(hotline)
         .then(() => alert(`Copied: ${hotline}`) )
         .catch(err => console.error('Copy failed',err));
+        copy_count++;
+        document.getElementById("copy").innerHTML = copy_count + " Copy";
     });
 });
+
+
+// Call Feature
+
+
