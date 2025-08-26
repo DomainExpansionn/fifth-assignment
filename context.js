@@ -11,16 +11,30 @@ const favourites = document.querySelectorAll(".favourite");
 favourites.forEach((fav) => {
   let fav_state = false;
   fav.addEventListener("click", () => {
-    if (fav_state === false) {
-      heart_count ++;
+    // if (fav_state === false) {
+    //   heart_count ++;
 
-      document.getElementById("heart").innerHTML = heart_count;
-      fav_state = true;
-    } else {
-      heart_count--;
+    //   document.getElementById("heart").innerHTML = heart_count;
+    //   fav_state = true;
+    // } else {
+    //   heart_count--;
 
-      document.getElementById("heart").innerHTML = heart_count;
-      fav_state = false;
-    }
+    //   document.getElementById("heart").innerHTML = heart_count;
+    //   fav_state = false;
+    // }
+
+    heart_count++;
+    document.getElementById("heart").innerHTML = heart_count;
   });
+});
+
+const copy_btn = document.querySelectorAll('.copy-btn');
+copy_btn.forEach((copied) =>{
+    copied.addEventListener('click', ()=>{
+        const card = copied.closest('.card');
+        const hotline = card.querySelector('.hotline').innerHTML;
+        navigator.clipboard.writeText(hotline)
+        .then(() => alert(`Copied: ${hotline}`) )
+        .catch(err => console.error('Copy failed',err));
+    });
 });
