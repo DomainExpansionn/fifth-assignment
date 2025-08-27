@@ -67,11 +67,11 @@ call_btn.forEach((called) =>{
       const historyCard = document.createElement('div');
       historyCard.className = "bg-[#FAFAFA] rounded-lg p-4 flex items-center justify-between  flex-col lg:flex-row shadow-md ";
       historyCard.innerHTML = `
-      <div>
+      <div class ="self-start" >
         <h1 class="text-[18px] font-bold text-black">${serviceTitle}</h1>
         <p class= "lg:p-0 lg:bg-white p-3 bg-gray-200 rounded-2xl w-fit">${hotline}</p>
       </div>
-      <div>
+      <div class="lg:border-none mt-1 border border-gray-400">
         <p>${time}</p>
       </div>
     `;
