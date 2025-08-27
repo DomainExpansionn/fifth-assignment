@@ -65,7 +65,7 @@ call_btn.forEach((called) =>{
       document.getElementById("coin").innerHTML = coin_count;
       
       const historyCard = document.createElement('div');
-      historyCard.className = "bg-[#FAFAFA] rounded-lg p-4 flex items-center justify-between lg:flex-row flex-col";
+      historyCard.className = "bg-[#FAFAFA] rounded-lg p-4 flex items-center justify-between  flex-col lg:flex-row shadow-md ";
       historyCard.innerHTML = `
       <div>
         <h1 class="text-[18px] font-bold text-black">${serviceTitle}</h1>
@@ -84,8 +84,9 @@ call_btn.forEach((called) =>{
 // Delete history
 const clearButton = document.getElementById('clear-btn');
 clearButton.addEventListener('click', ()=>{
-  if(historyDiv.lastElementChild){
-    historyDiv.removeChild(historyDiv.lastElementChild);
-  }
+  // if(historyDiv.lastElementChild){
+  //   historyDiv.removeChild(historyDiv.lastElementChild);
+  // }
+  historyDiv.innerHTML = '';
 } );
 
