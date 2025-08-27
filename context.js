@@ -68,7 +68,7 @@ call_btn.forEach((called) =>{
       historyCard.className = "bg-[#FAFAFA] rounded-lg p-4 flex items-center justify-between lg:flex-row flex-col";
       historyCard.innerHTML = `
       <div>
-        <h1 class="text-xl font-bold text-black">${serviceTitle}</h1>
+        <h1 class="text-[18px] font-bold text-black">${serviceTitle}</h1>
         <p class= "lg:p-0 lg:bg-white p-3 bg-gray-200 rounded-2xl w-fit">${hotline}</p>
       </div>
       <div>
