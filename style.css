@@ -12,3 +12,10 @@
   font-family: "Inter", sans-serif;
  
 }
+
+.copy-btn:hover{
+    background: rgb(145, 138, 138);
+    color: white;
+    transition: all 0.3s ease;
+    
+}
